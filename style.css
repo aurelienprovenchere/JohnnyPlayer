@@ -1,0 +1,278 @@
+body {
+    background: url(./media/pictures/background.png);
+    padding: 60px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+/*
+OVERLAY 
+*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: black;
+    opacity: 1;
+    display: flex;
+    color: white;
+
+}
+
+.overlay .johnny-overlay img {
+    width: 500px;
+}
+
+.overlay .johnny-overlay p {
+    margin: 50px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.overlay .johnny-overlay #overlay-link {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.overlay .johnny-overlay:hover {
+    cursor: pointer;
+}
+
+
+
+
+/*END OF OVERLAY */
+/*
+PLAYER 
+*/
+
+.player {
+    display: flex;
+    justify-content: center;
+    /* background-color: chartreuse; */
+    padding: 20px;
+}
+
+
+
+/*
+** Container 1 : picture + seek bar + volume + info button
+*/
+
+
+.player .container1 .song-picture img {
+    width: 400px;
+    height: auto;
+    border-radius: 5%;
+    position: absolute;
+
+}
+
+
+.player .container1 .seek-bar {
+    position: relative;
+    width: 300px;
+    height: 7px;
+    border-radius: 15%;
+    background: #61A4AD;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    top: 93%;
+    left: 15%;
+}
+
+.player .container1 .seek-bar:hover {
+    cursor: pointer;
+}
+
+
+
+.player .container1 .seek-bar .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+}
+
+
+.player .container1 .iconsCover img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+}
+
+.player .container1 .iconsCover img:hover {
+    cursor: pointer;
+}
+
+.player .container1 .iconsCover #volume-up {
+    top: 14%;
+    left: 34%;
+}
+
+.player .container1 .iconsCover #volume-down {
+    top: 14%;
+    left: 59%;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.hidden-overlay {
+    animation-name: hidden-overlay;
+    animation-duration: 1.1s;
+}
+
+@keyframes hidden-overlay {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+
+
+
+/*
+**
+*/
+/*
+** Container 2 : controls buttons 
+*/
+
+.player .container2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    margin-left: 7%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.player .container2 div {
+    border-radius: 2%;
+    padding: 5%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.player .container2 div img:hover {
+    cursor: pointer;
+    transform: scale(1.3, 1.3);
+}
+
+
+
+
+
+/*
+**
+*/
+/*
+** Container 3 : playlist
+*/
+
+.player .container3 {
+    width: 450px;
+    height: 450px;
+    /* background-color: #0665a2; */
+
+}
+
+
+
+
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 5rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 .5rem black;
+
+    animation: changeColor 13s infinite;
+}
+
+
+@keyframes changeColor {
+    0% {
+        background-color: #001F3F;
+    }
+
+    100% {
+        background-color: #FF4136;
+    }
+}
+
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+    animation-name: music-playing;
+    animation-duration: 4s;
+}
+
+kbd {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.keys .key span {
+    font-size: 15px;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+
+}
+
+@keyframes music-playing {
+    0% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}

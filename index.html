@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🙏❤️ Johnny's Audio Player 🙏❤️</title>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- OVERLAY -->
+    <div class="overlay js-overlay">
+        <div class="johnny-overlay">
+            <img src="media/pictures/johnny-hallyday-2.jpg" alt="">
+        </div>
+        <div class="johnny-overlay">
+            <p>BIENVENUE DANS L'UNIVERS DE <br> JOHNNY HALLYDAY</p>
+            <p>1943 - 2017</p>
+            <p id="overlay-link">Pas de click, Pas de Johnny </p>
+            <p>"On a tous un peu de lui en nous .... et de nous en lui"</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- PLAYER -->
+
+    <div class="player js-player">
+
+        <!-- container 1 : partie gauche -->
+
+        <div class="container1">
+            <div class="js-song-picture song-picture">
+                <img src="media/pictures/johnny-hallyday.jpg" alt="Johnny Hallyday">
+            </div>
+
+            <div class="seek-bar js-seek-bar">
+                <div class="fill js-seek-bar-fill"></div>
+            </div>
+
+
+
+            <div class="iconsCover">
+                <div class="js-volume-up">
+                    <img id="volume-up" src="media/favicon/volume-up.svg" alt="">
+                </div>
+
+                <div class="js-volume-down">
+                    <img id="volume-down" src="media/favicon/volume-down.svg" alt="">
+                </div>
+
+            </div>
+
+
+
+            <audio class="js-audio" src="media/songs/quelque-chose-de-tenessee.mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+
+        <!-- container 2 : partie droite -->
+
+        <div class="container2">
+            <div class="js-play play"><img src="media/favicon/play.svg" alt=""></div>
+            <div class="js-pause hidden"><img src="media/favicon/pause.svg" alt=""></div>
+            <div class="js-fifteen-before"><img src="media/favicon/fifteenBefore.svg" alt=""></div>
+            <div class="js-fifteen-after"><img src="media/favicon/fifteenAfter.svg" alt=""></div>
+            <div class="js-like"><a
+                    href="https://twitter.com/intent/tweet?text=Hey%20!%20%0AI%27m%20listening%20Johnny%20Hallyday%20on%20a%20player%20made%20by%20a%20HETIC%20Student.%20%0AIt%27s%20basic%20but%20it%20works.%0AHave%20a%20great%20day%20!!!!%0ABruno%20S."
+                    target="_blank"><img src="media/favicon/like.svg" alt=""></a></div>
+            <div class="js-display-playlist display-playlist"><img src="media/favicon/display-playlist.svg" alt="">
+            </div>
+            <div class="js-replay replay"><img src="media/favicon/refresh.svg" alt=""></div>
+        </div>
+
+        <!-- container 3 : playlist affiché à droite -->
+
+        <div class="container3 js-playlist hidden">
+            <div class="keys">
+                <div data-key="65" class="key">
+                    <kbd>A</kbd>
+                    <span class="sound">Allumer <br> le feu</span>
+                </div>
+                <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <span class="sound">BONUS <br> 2</span>
+                </div>
+                <div data-key="68" class="key">
+                    <kbd>D</kbd>
+                    <span class="sound">BONUS</span>
+                </div>
+                <div data-key="70" class="key">
+                    <kbd>F</kbd>
+                    <span class="sound">Je te promets</span>
+                </div>
+                <div data-key="71" class="key">
+                    <kbd>G</kbd>
+                    <span class="sound">L'envie</span>
+                </div>
+                <div data-key="72" class="key">
+                    <kbd>H</kbd>
+                    <span class="sound">Quelque chose <br> de Tenessee</span>
+                </div>
+            </div>
+
+            <audio data-key="65" src="media/songs/allumer-le-feu.mp3"></audio>
+            <audio data-key="83" src="media/songs/jeanne-au-secours.mp3"></audio>
+            <audio data-key="68" src="media/songs/rene-honteux.mp3"></audio>
+            <audio data-key="70" src="media/songs/je-te-promets.mp3"></audio>
+            <audio data-key="71" src="media/songs/lenvie.mp3"></audio>
+            <audio data-key="72" src="media/songs/quelque-chose-de-tenessee.mp3"></audio>
+
+        </div>
+
+
+
+
+    </div> <!-- fin div player-->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
